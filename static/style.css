@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'Geist-Regular';
+    src: url('fonts/Geist/Geist-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: "'Geist-Regular", sans-serif;
+  background-color: #0d0d0d; /* deep dark */
+  color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Chat container */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  height: 80vh;
+  background: #1a1a1a;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+/* Chat messages area */
+.chat-box {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #444 #1a1a1a;
+}
+
+/* Scrollbar for WebKit */
+.chat-box::-webkit-scrollbar {
+  width: 6px;
+}
+.chat-box::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 10px;
+}
+
+/* Messages */
+.message {
+  max-width: 75%;
+  margin-bottom: 12px;
+  padding: 12px 16px;
+  border-radius: 16px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+
+.user-message {
+  background: #4a90e2;
+  color: white;
+  align-self: flex-end;
+  border-top-right-radius: 0;
+}
+
+.bot-message {
+  background: #2a2a2a;
+  align-self: flex-start;
+  border-top-left-radius: 0;
+}
+
+/* Input area */
+.input-area {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  background: #141414;
+  border-top: 1px solid #333;
+}
+
+.input-area input[type="text"] {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: #222;
+  color: #eaeaea;
+  font-size: 1rem;
+  outline: none;
+}
+
+.input-area input::placeholder {
+  color: #888;
+}
+
+/* Button */
+.input-area button {
+  padding: 12px 20px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s ease;
+}
+
+.input-area button:hover {
+  background: #357ab8;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .chat-container {
+    height: 100vh;
+    border-radius: 0;
+  }
+  .message {
+    max-width: 90%;
+  }
+}
