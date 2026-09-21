@@ -7,3 +7,8 @@ There is now a basic frontend and backend implemented, which runs on a local hos
 HTML and CSS file for the frontend to create a webpage for interaction.
 Javascript (inside index.html) and Flask is used in the backend to provide the text responses from the chatbot to the webpage.
 The webpage styling is basic.
+
+## Demo
+
+https://github.com/user-attachments/assets/b492db79-845b-44ad-b645-be2e97a9ba65
+
